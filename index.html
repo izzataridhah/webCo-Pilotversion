@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Sederhana</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">PortfolioKu</h1>
+      <nav class="nav">
+        <a href="#home">Beranda</a>
+        <a href="#projects">Proyek</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <button id="themeToggle" aria-label="Ganti tema" class="btn">🌙 Tema</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h2>Halo, saya Alex.</h2>
+        <p>Saya membangun website sederhana yang cepat, responsif, dan enak dilihat.</p>
+        <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h3>Proyek Pilihan</h3>
+        <div class="grid">
+          <article class="card">
+            <h4>Landing Page</h4>
+            <p>Halaman promosi produk dengan CTA jelas dan desain minimalis.</p>
+            <button class="btn btn-outline" data-modal="Landing Page" data-desc="Halaman promosi dengan hero, fitur, dan CTA.">Detail</button>
+          </article>
+          <article class="card">
+            <h4>To-Do App</h4>
+            <p>Aplikasi daftar tugas ringan dengan penyimpanan lokal.</p>
+            <button class="btn btn-outline" data-modal="To-Do App" data-desc="CRUD tugas sederhana + localStorage.">Detail</button>
+          </article>
+          <article class="card">
+            <h4>Galeri Foto</h4>
+            <p>Grid gambar responsive dengan lightbox sederhana.</p>
+            <button class="btn btn-outline" data-modal="Galeri Foto" data-desc="Galeri responsif dan modal preview.">Detail</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container">
+        <h3>Tentang Saya</h3>
+        <p>Saya suka menggabungkan desain bersih dengan kode yang rapi. Fokus pada aksesibilitas, performa, dan pengalaman pengguna.</p>
+        <ul class="list">
+          <li><strong>Keahlian:</strong> HTML, CSS, JavaScript</li>
+          <li><strong>Nilai:</strong> Sederhana, cepat, mudah digunakan</li>
+          <li><strong>Lokasi:</strong> Jakarta</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h3>Kontak</h3>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Nama Anda" required />
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@contoh.com" required />
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="form-row">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="4" placeholder="Apa yang bisa saya bantu?" required></textarea>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <button type="submit" class="btn btn-primary">Kirim</button>
+          <p id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 PortfolioKu. Dibuat dengan ❤️ menggunakan HTML, CSS, dan JS.</p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Tutup modal">&times;</button>
+      <h4 id="modalTitle">Judul Proyek</h4>
+      <p id="modalDesc">Deskripsi proyek.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
